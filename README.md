@@ -11,6 +11,7 @@ It is first release of game and it has:
 - 3 type of guns: Pistol, ShotGun, MachineGun
 - 5 types od Bonuses: AttackBonus, SpeedBonus, HealthBonus, TerminaleBonus and ShieldBonus
 
+I
 
 The goal of creation was to practice with python coding
 
