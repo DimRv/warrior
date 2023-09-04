@@ -1,7 +1,7 @@
 # warrior
 2d game written on Python's Pygame module
 
-The goal of game is to survive much more time and get more points.
+The goal of game is to survive as long as possible and get more points.
 
 It is first release of game and it has:
 
@@ -11,8 +11,11 @@ It is first release of game and it has:
 - 3 type of guns: Pistol, ShotGun, MachineGun
 - 5 types od Bonuses: AttackBonus, SpeedBonus, HealthBonus, TerminaleBonus and ShieldBonus
 
-I
+To play game you need:
+- pygame module
+- mouse
+- keyboard with working keys: 'A', 'W', 'S', 'D' :)
 
-The goal of creation was to practice with python coding
+The goal of creation was to practice with python coding and OOP
 
 Have Fun!
