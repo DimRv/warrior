@@ -46,7 +46,7 @@ class Game:
         self.score_surface = self.get_score_surface()
 
     def start_game(self):
-        pg.mixer.music.load('sounds\\menu.mp3')
+        pg.mixer.music.load('./sounds/menu.mp3')
         pg.mixer.music.play()
         while self.is_running:
             self.clock.tick(60)
@@ -93,7 +93,7 @@ class Game:
                     if self.start_menu and event.button == 1:
                         if self.menu_buttons[self.menu_active_button] == 'Start Game' and self.cursor_on_button:
                             self.start_menu = False
-                            pg.mixer.music.load('sounds\\fon.mp3')
+                            pg.mixer.music.load('./sounds/fon.mp3')
                             pg.mixer.music.play()
                             self.start = True
                         if self.menu_buttons[self.menu_active_button] == 'Best Results' and self.cursor_on_button:
@@ -113,7 +113,7 @@ class Game:
                         if self.start_menu:
                             if self.menu_buttons[self.menu_active_button] == 'Start Game':
                                 self.start_menu = False
-                                pg.mixer.music.load('sounds\\fon.mp3')
+                                pg.mixer.music.load('./sounds/fon.mp3')
                                 pg.mixer.music.play()
                                 self.start = True
                             if self.menu_buttons[self.menu_active_button] == 'Best Results':
@@ -139,12 +139,12 @@ class Game:
                         if self.game_menu:
                             self.game_menu = False
                             self.start = True
-                            pg.mixer.music.load('sounds\\fon.mp3')
+                            pg.mixer.music.load('./sounds/fon.mp3')
                             pg.mixer.music.play()
                         else:
                             self.game_menu = True
                             self.start = False
-                            pg.mixer.music.load('sounds\\pause.mp3')
+                            pg.mixer.music.load('./sounds/pause.mp3')
                             pg.mixer.music.play()
                     if event.key in (pg.K_w, pg.K_a, pg.K_s, pg.K_d):
                         self.player.set_move_direction(event.type, event.key)
@@ -162,7 +162,7 @@ class Game:
                         if self.game_menu_buttons[self.game_menu_active_button] == "Resume Game":
                             self.start = True
                             self.game_menu = False
-                            pg.mixer.music.load('sounds\\fon.mp3')
+                            pg.mixer.music.load('./sounds/fon.mp3')
                             pg.mixer.music.play()
                         if self.game_menu_buttons[self.game_menu_active_button] == "Quit":
                             self.game_menu = False
@@ -193,7 +193,7 @@ class Game:
                             if self.game_menu_buttons[self.game_menu_active_button] == 'Resume Game' and self.cursor_on_button:
                                 self.start = True
                                 self.game_menu = False
-                                pg.mixer.music.load('sounds\\fon.mp3')
+                                pg.mixer.music.load('./sounds/fon.mp3')
                                 pg.mixer.music.play()
                             if self.game_menu_buttons[self.game_menu_active_button] == "Quit" and self.cursor_on_button:
                                 self.game_menu = False
@@ -453,7 +453,7 @@ class Game:
     def get_results_menu(self, current=False):
         font = pg.font.SysFont('Arial', 36)
         surf = pg.Surface(self._screen_size)
-        with open('results\\results.txt') as results_file:
+        with open('./results/results.txt') as results_file:
             values = results_file.read().split("\n")
             vertical = 0
             for i in range(len(values)):
@@ -509,7 +509,7 @@ class Game:
     def end_game(self):
         points = self.player.points
         if points > 0:
-            with open('results\\results.txt', 'r') as results_file:
+            with open('./results/results.txt', 'r') as results_file:
                 values = [int(i) for i in results_file.read().split("\n")]
             if min(values) < points:
                 values.append(int(points))
@@ -517,7 +517,7 @@ class Game:
                 values = values[:10]
                 values = [str(i) for i in values]
                 values = "\n".join(values)
-                with open('results\\results.txt', 'w') as results_file:
+                with open('./results/results.txt', 'w') as results_file:
                     results_file.write(values)
             self.results_menu_surface = self.get_results_menu(points)
 
@@ -530,7 +530,7 @@ class Game:
         self.enemy_time = 60
         self.score_surface = self.get_score_surface()
         Bug.speed = 1
-        pg.mixer.music.load('sounds\\menu.mp3')
+        pg.mixer.music.load('./sounds/menu.mp3')
         pg.mixer.music.play()
 
 

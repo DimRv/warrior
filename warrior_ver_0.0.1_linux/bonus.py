@@ -14,7 +14,7 @@ class BonusObject(VisibleObject):
         self.radius_time = 3
         self.decrease = True
         self.button = button
-        self.sound = pg.mixer.Sound('sounds\\bonus.mp3')
+        self.sound = pg.mixer.Sound('./sounds/bonus.mp3')
 
     def get_surface(self):
         surf = pg.Surface(self.size)
@@ -70,7 +70,7 @@ class TerminateBonus(BonusObject):
         BonusObject.__init__(self, size, pos, "T")
         self.time = 50
         self.angle = 0
-        self.sound = pg.mixer.Sound('sounds\\terminate.mp3')
+        self.sound = pg.mixer.Sound('./sounds./terminate.mp3')
         self.start_surface = self.create_surface()
         self.surface = self.get_surface()
 
@@ -108,5 +108,4 @@ class MachineGunBonus(BonusObject):
 
     def __repr__(self):
         return "MG"
-
 

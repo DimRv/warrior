@@ -7,7 +7,7 @@ class Pistol:
         self.shoot_time = 40
         self.shoot_timer = 40
         self.shoot_distance = 500
-        self.sound = pg.mixer.Sound('sounds\\pistol.mp3')
+        self.sound = pg.mixer.Sound('./sounds/pistol.mp3')
 
 
 class Shotgun:
@@ -16,7 +16,7 @@ class Shotgun:
         self.shoot_time = 60
         self.shoot_timer = 60
         self.shoot_distance = 450
-        self.sound = pg.mixer.Sound('sounds\\shotgun.mp3')
+        self.sound = pg.mixer.Sound('./sounds/shotgun.mp3')
 
 
 class MachineGun:
@@ -25,4 +25,4 @@ class MachineGun:
         self.shoot_time = 13
         self.shoot_timer = 13
         self.shoot_distance = 800
-        self.sound = pg.mixer.Sound('sounds\\machinegun.mp3')
+        self.sound = pg.mixer.Sound('./sounds/machinegun.mp3')

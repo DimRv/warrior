@@ -47,7 +47,7 @@ class Player(VisibleObject):
         self.move_direction = (0, 0)
         self.weapon = Pistol()
         self.shield = False
-        self.death_sound = pg.mixer.Sound("sounds\\death.mp3")
+        self.death_sound = pg.mixer.Sound("./sounds/death.mp3")
         self.start_surface = self.create_surface()
         self.surface = self.start_surface
 
@@ -122,7 +122,7 @@ class Bug(VisibleObject):
         self.center = pos
         self.angle = self.set_angle(screen_center)
         self.start_surface = self.create_surface()
-        self.sound = pg.mixer.Sound(choice(['sounds\\bug_die.mp3', 'sounds\\bug_die2.mp3', 'sounds\\bug_die3.mp3']))
+        self.sound = pg.mixer.Sound(choice(['./sounds/bug_die.mp3', './sounds/bug_die2.mp3', './sounds/bug_die3.mp3']))
         self.surface = self.change_surface()
 
     def create_surface(self):
